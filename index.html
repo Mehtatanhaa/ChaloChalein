@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreWorld Tours</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About Us</a></li>
+            <li><a href="#" onclick="showSection('tours')">Tours</a></li>
+            <li><a href="#" onclick="showSection('booking')">Book Now</a></li>
+            <li><a href="#" onclick="showSection('login')">Login</a></li>
+            <li><a href="#" onclick="showSection('signup')">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchBox" placeholder="Search for destinations..." onkeyup="searchTours()">
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <h1>Welcome to ExploreWorld</h1>
+        <p>Your journey begins here! Find the best tour packages around the world.</p>
+        <button onclick="showSection('tours')">Explore Tours</button>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section" style="display:none;">
+        <h1>About Us</h1>
+        <p>We provide unforgettable travel experiences with carefully designed tour packages.</p>
+    </section>
+
+    <!-- Tours Section -->
+    <section id="tours" class="section" style="display:none;">
+        <h1>Popular Tours</h1>
+        <div class="tour" data-destination="Paris">
+            <img src="https://th.bing.com/th/id/R.69d6068df1302c49a9f2353c7204ff2f?rik=NHyYGLsZ6MU8fg&riu=http%3a%2f%2fcitypictures.org%2fdata%2fmedia%2f219%2fEiffel+Tower+at+Night%2c+Paris%2c+France.jpg&ehk=u5YHUKJihXBCicew9ru20ivUaZAJOg6qmnZGmVeRoS0%3d&risl=&pid=ImgRaw&r=0" alt="Paris">
+            <h2>Paris, France</h2>
+        </div>
+        <div class="tour" data-destination="Maldives">
+            <img src="https://th.bing.com/th/id/OIP.F2b2bVhPKuGDYf6lmViHwgHaFj?w=238&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Paris">
+            
+            <h2>Maldives</h2>
+        </div>
+        <div class="tour" data-destination="Dubai">
+            <img src="https://th.bing.com/th/id/OIP.5b5uu6bKJU4YhdZ-WEaCmAHaE7?w=251&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Dubai">
+            <h2>Dubai, UAE</h2>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="section" style="display:none;">
+        <h1>Book Your Tour</h1>
+        <form id="bookingForm">
+            <label>Destination:</label>
+            <select>
+                <option>Paris</option>
+                <option>Maldives</option>
+                <option>Dubai</option>
+            </select>
+            <label>Date of Travel:</label>
+            <input type="date" required>
+            <label>Number of Travelers:</label>
+            <input type="number" min="1" required>
+            <label>Special Requests:</label>
+            <textarea placeholder="Any special requests..."></textarea>
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="section" style="display:none;">
+        <h1>Login</h1>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <input type="password" placeholder="Enter your password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signup" class="section" style="display:none;">
+        <h1>Sign Up</h1>
+        <form>
+            <input type="text" placeholder="Enter your name" required>
+            <input type="email" placeholder="Enter your email" required>
+            <input type="password" placeholder="Enter your password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
